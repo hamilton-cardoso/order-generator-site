@@ -1,0 +1,58 @@
+.sidenav-container {
+    height: 100vh;
+    background-color: #dee0d5;
+  }
+  
+  .sidenav {
+    width: 220px;
+    background-color: #dee0d5;
+    color: #d1f3a3;
+  
+    mat-toolbar {
+      background-color: #2d3d33;
+      color: #d1f3a3;
+      font-weight: bold;
+    }
+  
+    a.mat-list-item {
+      color: #d1f3a3 !important; // força a cor do texto do link
+      font-weight: 500;
+  
+      .mat-icon {
+        color: #d1f3a3 !important; // caso você use ícones no futuro
+      }
+  
+      &:hover {
+        background-color: rgba(209, 243, 163, 0.1); // leve destaque
+      }
+  
+      &.mat-list-item-active {
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .content {
+    padding: 20px;
+    padding-top: 84px;
+    min-height: 100vh;
+    background-color: #f4f3eb;
+    color: #2d3d33;
+  }
+  
+  .custom-link {
+    color: #d1f3a3 !important;
+  }
+
+  ::ng-deep .mat-list-item .mat-line {
+    color: #d1f3a3 !important;
+  }
+  
+  ::ng-deep .mat-list-item {
+    color: #d1f3a3 !important;
+  }
+  
+  .main-content {
+    padding: 16px;
+    margin-top: 64px; // altura padrão do mat-toolbar
+  }
