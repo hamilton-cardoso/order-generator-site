@@ -31,7 +31,7 @@ ng version
 
 ```bash
 git clone https://github.com/hamilton-cardoso/order-generator-site.git
-cd order-generator-frontend
+cd order-generator-site
 ```
 
 2. Instale as dependências:
