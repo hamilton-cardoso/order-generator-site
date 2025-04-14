@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
 export class MenuComponent {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(private readonly observer: BreakpointObserver) {}
 
   ngAfterViewInit(): void {
     this.observer.observe(['(max-width: 768px)']).subscribe(res => {

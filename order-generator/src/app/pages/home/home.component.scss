@@ -1,0 +1,15 @@
+.center-page {
+    height: 100vh; /* ocupa 100% da altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .headline {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  

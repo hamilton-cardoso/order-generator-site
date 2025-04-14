@@ -1,6 +1,12 @@
 <mat-card class="order-form-card">
     <mat-card-title>Enviar Nova Ordem</mat-card-title>
     <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+      <!-- Campo para selecionar o Lado (Compra ou Venda) -->
+      <mat-radio-group formControlName="side" class="side-radio-group">
+        <mat-radio-button value="Compra">Compra</mat-radio-button>
+        <mat-radio-button value="Venda" style="margin-left: 16px;">Venda</mat-radio-button>
+      </mat-radio-group>
+      
       <!-- Campo para selecionar o Símbolo -->
       <mat-form-field appearance="fill" class="full-width">
         <mat-label>Símbolo</mat-label>
@@ -9,16 +15,7 @@
           <mat-option value="VALE3">VALE3</mat-option>
           <mat-option value="VIIA4">VIIA4</mat-option>
         </mat-select>
-      </mat-form-field>
-  
-      <!-- Campo para selecionar o Lado (Compra ou Venda) -->
-      <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Lado</mat-label>
-        <mat-select formControlName="side">
-          <mat-option value="Compra">Compra</mat-option>
-          <mat-option value="Venda">Venda</mat-option>
-        </mat-select>
-      </mat-form-field>
+      </mat-form-field>      
   
       <!-- Campo para informar a Quantidade -->
       <mat-form-field appearance="fill" class="full-width">
@@ -38,6 +35,10 @@
       <button mat-raised-button color="primary" type="submit" [disabled]="orderForm.invalid">
         Enviar Ordem
       </button>
+      <div *ngIf="responseMessage" [style.color]="isError ? 'red' : 'green'" style="margin-top: 16px;">
+        {{ responseMessage }}
+      </div>
+      
     </form>
   </mat-card>
   
